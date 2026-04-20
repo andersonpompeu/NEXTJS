@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import LGPDConsent from "@/components/LGPDConsent";
+import StructuredData from "@/components/StructuredData";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${montserrat.variable} ${inter.variable} antialiased`}>
         <Providers>
+          <StructuredData />
           {children}
           <LGPDConsent />
         </Providers>
